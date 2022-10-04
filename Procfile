@@ -1,1 +1,1 @@
-web: gunicorn A&D.wsgi --log-file -
+web: gunicorn main.wsgi --log-file -
