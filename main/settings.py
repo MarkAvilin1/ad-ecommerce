@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
@@ -53,7 +54,7 @@ ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,9 +118,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
-# STATIC_ROOT = BASE_DIR /'static'
-STATICFILES_DIRS = [f'{BASE_DIR}/static/', ]
+
+os.makedirs(STATIC_TMP, exist_ok=True)
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 # media files configuration
