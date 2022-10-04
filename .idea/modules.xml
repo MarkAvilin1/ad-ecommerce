@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/A&amp;D.iml" filepath="$PROJECT_DIR$/.idea/A&amp;D.iml" />
+      <module fileurl="file://D:/Django/PaySystem/payment_system/pay_system/.idea/pay_system.iml" filepath="D:/Django/PaySystem/payment_system/pay_system/.idea/pay_system.iml" />
     </modules>
   </component>
 </project>
