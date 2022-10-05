@@ -118,19 +118,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_TMP = os.path.join(BASE_DIR, 'static')
-# STATIC_HOST = "https://d4663kmspf1sqa.cloudfront.net" if not DEBUG else ""
-# STATIC_URL = STATIC_HOST + "/static/"
-STATIC_URL = 'static/'
-
-os.makedirs(STATIC_TMP, exist_ok=True)
-os.makedirs(STATIC_ROOT, exist_ok=True)
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+# STATIC_HOST = "https://d4663kmspf1sqa.cloudfront.net" if not DEBUG else ""
+# STATIC_URL = STATIC_HOST + "/static/"
+
+
+# os.makedirs(STATIC_TMP, exist_ok=True)
+# os.makedirs(STATIC_ROOT, exist_ok=True)
+
+
 
 
 # media files configuration
